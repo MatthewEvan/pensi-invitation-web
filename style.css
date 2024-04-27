@@ -1,62 +1,203 @@
-*, *::before, *::after {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-size: 14px;
-    color: hsl(240, 2%, 23%);
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: hsl(240, 2%, 23%);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+/* Layout Initialization */
+body {
+  height: 100%;
+  font-family: "DM Serif Display", serif;
+}
+
+main {
+  /*jarak antara navbar sama content */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+  scroll-padding: 5rem;
+  z-index: 1;
+}
+
+
+/* MAIN NAVBAR */
+nav {
+  width: 100vw;
+  height: 4rem;
+  /* positioning */
+  display: grid;
+  place-items: center;
+  position: fixed;
+  z-index: 5;
+  transition: all ease-in-out 150ms;
+}
+
+nav > img {
+  height: 2.5rem;
+}
+
+nav.scrolled {
+  backdrop-filter: blur(20px);
+}
+
+/* MAIN CONTENT HEADER */
+#header-invitation {
+  width: 100%;
+  min-height: 110vh;
+  background: url(assets/images/header/background-header.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+
+  /* layouting */
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 5rem;
+}
+
+#header-invitation .wrap {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+#header-invitation .wrap > img {
+  width: 25vw;
+}
+
+.header-description {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  align-items: flex-start;
+}
+
+.header-description h1 {
+  font-size: 3rem;
+  color: white;
+  text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff;
+  font-style: italic;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid white;
+}
+
+.pensi-smak1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-description .pensi-smak1 p {
+  font-size: 1.25rem;
+  color: white;
+  font-weight: 800;
+  font-style: italic;
+  line-height: 100%;
+}
+
+.header-description .pensi-smak1 h2 {
+  font-size: 5.2rem;
+  color: white;
+  font-weight: 800;
+  font-style: italic;
+  letter-spacing: 0.1rem;
+  line-height: 95%;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 12px #fff,
+    0 0 20px #fff;
+}
+
+.header-description > img {
+  width: 5rem;
+}
+
+.header-logos {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 0.5rem;
+}
+
+.header-logos img {
+  width: 7rem;
+}
+
+.header-description > a {
+  padding: 1rem 2rem;
+  background: linear-gradient(90deg, #1ae7f2, #2243ba);
+  border-radius: 1rem;
+  transition: all 150ms ease-in-out;
+  box-shadow: rgba(237, 237, 242, 0.2) 0px 7px 29px 0px;
+
+  font-size: 1rem;
+  font-weight: 800;
+  color: white;
+}
+
+.header-description > a:hover {
+  scale: 1.05;
+  background: linear-gradient(105deg, #1ae7f2, #2243ba);
+}
+
+@media screen and (max-width: 768px) {
+  #header-invitation {
+    min-height: 100vh;
   }
-  
-  a {
-    text-decoration: none;
+  #header-invitation .wrap > img {
+    width: 35vw;
   }
-  
-  ul li {
-    list-style-type: none;
+  .header-description {
+    gap: 1.5rem;
   }
-  
-  /* Layout Initialization */
-  body {
-    height: 100%;
-    font-family: "Playfair Display", sans-serif;
+  .header-description h1 {
+    font-size: 2.5rem;
   }
-  main {
-    /*jarak antara navbar sama content */
-    display: flex;
+  .header-description .pensi-smak1 p {
+    font-size: 1.2rem;
+  }
+  .header-description .pensi-smak1 h2 {
+    font-size: 4.6rem;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  #header-invitation .wrap {
     flex-direction: column;
     align-items: center;
   }
-  
-  html {
-    height: 100%;
-    scroll-behavior: smooth;
-    scroll-padding: 5rem;
-    z-index: 1;
+
+  #header-invitation .wrap > img {
+    width: 70vw;
   }
+  .header-description {
+    align-items: center;
+  }
+  .pensi-smak1 {
+    align-items: center;
+  }
+}
 
 
-  /* MAIN NAVBAR */
-  nav {
-    width: 100vw;
-    height: 4rem;
-    background: linear-gradient(90deg, #1ae7f2, #2243ba);
-    /* positioning */
-    display: grid;
-    place-items: center;
-    position: fixed;
-    z-index: 5;
-  }
-  nav > img {
-    height: 2.5rem;
-  }
 
-  main > img {
-    width: 100%;
-  }
-
-  @media screen and (max-width: 640px) {
-    main > img {
-        width: 100%;
-        object-fit: cover;
-        object-position: center;
-      }
-  }
