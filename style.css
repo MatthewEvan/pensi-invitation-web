@@ -202,32 +202,111 @@ nav.scrolled {
   border-radius: 1rem;
 }
 
-.description-dblouse {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
-.description-dblouse img {
-  width: 4rem;
-  aspect-ratio: 1/1;
-  border-radius: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-.description-dblouse p {
-  font-size: 2rem;
-  color: white;
-  text-shadow:
-    0 0 7px #fff;
-  font-weight: 800;
-  line-height: 100%;
-}
 .tulus img:nth-child(3) {
   width: 13.75rem;
   height: 2.5rem;
   border-radius: 0;
-  margin-top: 0.6rem;
+}
+
+#essential-info {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 2rem 8vw;
+  background-color: #cfd4ff;
+  gap: 2rem;
+}
+
+.wrapper-embed-maps {
+  flex: 1;
+}
+.embed-maps {
+  width: 40vw;
+  aspect-ratio: 3/2;
+  border-radius: 2rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 0.5rem;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+  gap: 1.25rem;
+}
+.info-container > h4 {
+  font-size: 2.5rem;
+  color: rgb(0, 0, 0);
+  padding-bottom: 1rem;
+}
+.sesi {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.sesi div {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+.sesi div p {
+  font-size: 1.125rem;
+}
+.sesi div p span {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.location svg {
+  width: 2rem;
+  height: 2rem;
+}
+.location div {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 0.1rem;
+}
+.location div h5 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.date {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.date p {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+#essential-info .info-container > a {
+  padding: 1rem 2rem;
+  background-color: #7d76ff;
+  border-radius: 1rem;
+  font-weight: 900;
+  transition: all 200ms ease-in-out;
+  color: #fff;
+}
+#essential-info .info-container > a:hover {
+  scale: 1.05;
+}
+
+.info-container div svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+audio {
+  display: none;
 }
 
 
@@ -260,6 +339,17 @@ nav.scrolled {
   }
   .tulus img:nth-child(3) {
     margin-top: 0rem;
+  }
+
+  #essential-info {
+    flex-direction: column;
+    align-items: center;
+  }
+  .embed-maps {
+    width: 90vw;
+  }
+  .info-container {
+    align-items: center;
   }
 }
 
