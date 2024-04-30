@@ -144,23 +144,46 @@ nav.scrolled {
   width: 7rem;
 }
 
-.header-description > a {
-  padding: 1rem 2rem;
+.reservation {
+  width: 100%;
+  height: 5rem;
+  display: grid;
+  place-items: center;
+  background-color: #cfd4ff;
+}
+.reservation > a {
+  padding: 1rem 3rem;
   background: linear-gradient(90deg, #1ae7f2, #2243ba);
   border-radius: 1rem;
   transition: all 150ms ease-in-out;
   box-shadow: rgba(237, 237, 242, 0.2) 0px 7px 29px 0px;
-
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 800;
   color: white;
 }
 
-.header-description > a:hover {
+.reservation > a:hover {
   scale: 1.05;
   background: linear-gradient(105deg, #1ae7f2, #2243ba);
 }
 
+.controls {
+  padding-top: 1rem;
+}
+#play-pause-button {
+  padding: 1rem 3rem;
+  font-weight: 700;
+  font-size: 1.05rem;
+  border-radius: 1rem;
+  background: linear-gradient(90deg, #1ae7f2, #2243ba);
+  transition: all 150ms ease-in-out;
+  color: white;
+}
+
+#play-pause-button:hover {
+  scale: 1.05;
+  background: linear-gradient(105deg, #1ae7f2, #2243ba);
+}
 
 /* GUESTSTAR INFORMATION */
 #guests-showcase {
@@ -304,8 +327,6 @@ nav.scrolled {
   width: 2rem;
   height: 2rem;
 }
-
-
 
 
 

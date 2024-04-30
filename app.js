@@ -8,10 +8,16 @@ document.addEventListener("scroll", function () {
     }
 });
 
-var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-if (!isChrome){
-    $('#iframeAudio').remove()
-}
-else {
-    $('#playAudio').remove() // just to make sure that it will not have 2x audio in the background 
-}
+const audio = document.getElementById("audio-player");
+const playPauseButton = document.getElementById("play-pause-button");
+
+let isPlaying = false;
+
+playPauseButton.addEventListener("click", () => {
+    if (isPlaying) {
+        audio.pause();
+    } else {
+        audio.play();
+    }
+    isPlaying = !isPlaying;
+});
