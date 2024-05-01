@@ -19,7 +19,7 @@ ul li {
 /* Layout Initialization */
 body {
   height: 100%;
-  font-family: "DM Serif Display", serif;
+  font-family: "Plus Jakarta Sans", serif;
 }
 
 main {
@@ -92,12 +92,13 @@ nav.scrolled {
 }
 
 .header-description h1 {
+  font-family: "DM Serif Display", serif;
   font-size: 3rem;
   color: white;
   text-shadow:
       0 0 7px #fff,
       0 0 10px #fff,
-      0 0 21px #fff;
+      0 0 18px #fff;
   font-style: italic;
   padding-bottom: 0.25rem;
   border-bottom: 2px solid white;
@@ -109,6 +110,7 @@ nav.scrolled {
 }
 
 .header-description .pensi-smak1 p {
+  font-family: "DM Serif Display", serif;
   font-size: 1.25rem;
   color: white;
   font-weight: 800;
@@ -117,6 +119,7 @@ nav.scrolled {
 }
 
 .header-description .pensi-smak1 h2 {
+  font-family: "DM Serif Display", serif;
   font-size: 5.2rem;
   color: white;
   font-weight: 800;
@@ -126,7 +129,7 @@ nav.scrolled {
   text-shadow:
     0 0 7px #fff,
     0 0 12px #fff,
-    0 0 20px #fff;
+    0 0 18px #fff;
 }
 
 .header-description > img {
@@ -144,32 +147,10 @@ nav.scrolled {
   width: 7rem;
 }
 
-.reservation {
-  width: 100%;
-  height: 5rem;
-  display: grid;
-  place-items: center;
-  background-color: #cfd4ff;
-}
-.reservation > a {
-  padding: 1rem 3rem;
-  background: linear-gradient(90deg, #1ae7f2, #2243ba);
-  border-radius: 1rem;
-  transition: all 150ms ease-in-out;
-  box-shadow: rgba(237, 237, 242, 0.2) 0px 7px 29px 0px;
-  font-size: 1.25rem;
-  font-weight: 800;
-  color: white;
-}
-
-.reservation > a:hover {
-  scale: 1.05;
-  background: linear-gradient(105deg, #1ae7f2, #2243ba);
-}
-
 .controls {
   padding-top: 1rem;
 }
+
 #play-pause-button {
   padding: 1rem 3rem;
   font-weight: 700;
@@ -185,10 +166,82 @@ nav.scrolled {
   background: linear-gradient(105deg, #1ae7f2, #2243ba);
 }
 
+
+#pengisi-acara {
+  width: 100%;
+  padding: 2rem 8vw 1rem;
+  background-color: #7d76ff;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+#pengisi-acara div {
+  /* styling spacing */
+  padding: 1rem 1rem 0;
+
+  /* background formatting  */
+  background: hsla(0, 0%, 87%, 0.65);
+  border-radius: 1rem;
+  backdrop-filter: blur(1rem);
+  border: 2px solid hsla(0, 0%, 100%, 0.34);
+  transition: all 350ms ease;
+
+  /* content inside */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+#pengisi-acara div img:nth-child(1) {
+  width: 11vw;
+}
+#pengisi-acara div img:nth-child(2) {
+  width: 12vw;
+}
+
+#pengisi-acara div:nth-child(4) img:nth-child(1) {
+  width: 8vw;
+  border-radius: 0.5rem;
+}
+
+#pengisi-acara div:nth-child(5) img:nth-child(1) {
+  width: 8vw;
+}
+#pengisi-acara div:nth-child(5) img:nth-child(2),
+#pengisi-acara div:nth-child(6) img:nth-child(2) {
+  width: 14vw;
+}
+
+#pengisi-acara div:nth-child(6) img:nth-child(1) {
+  width: 6vw;
+}
+
+#pengisi-acara div:nth-child(7) img:nth-child(2),
+#pengisi-acara div:nth-child(8) img:nth-child(2),
+#pengisi-acara div:nth-child(9) img:nth-child(2),
+#pengisi-acara div:nth-child(10) img:nth-child(2),
+#pengisi-acara div:nth-child(11) img:nth-child(2),
+#pengisi-acara div:nth-child(12) img:nth-child(2) {
+  width: 16vw;
+}
+
+#pengisi-acara div:nth-child(10) img:nth-child(1) {
+  border-radius: 0.75rem;
+  width: 8vw;
+}
+
+#pengisi-acara div:nth-child(11) img:nth-child(1) {
+  width: 15vw;
+}
+
+
 /* GUESTSTAR INFORMATION */
 #guests-showcase {
   width: 100%;
-  padding: 2rem 8vw;
+  padding: 1rem 8vw 0;
   display: flex;
   align-items: stretch;
   gap: 2rem;
@@ -328,6 +381,79 @@ nav.scrolled {
   height: 2rem;
 }
 
+.reservation {
+  width: 100%;
+  height: 5rem;
+  display: grid;
+  place-items: center;
+  background-color: #cfd4ff;
+}
+.reservation > a {
+  padding: 1rem 3rem;
+  background: linear-gradient(90deg, #1ae7f2, #2243ba);
+  border-radius: 1rem;
+  transition: all 150ms ease-in-out;
+  box-shadow: rgba(237, 237, 242, 0.2) 0px 7px 29px 0px;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: white;
+}
+
+.reservation > a:hover {
+  scale: 1.05;
+  background: linear-gradient(105deg, #1ae7f2, #2243ba);
+}
+
+
+@media screen and (max-width: 1024px) {
+  #pengisi-acara {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #pengisi-acara div img:nth-child(1) {
+    width: 15vw;
+  }
+  #pengisi-acara div img:nth-child(2) {
+    width: 20vw;
+  }
+  
+  #pengisi-acara div:nth-child(4) img:nth-child(1) {
+    width: 12vw;
+    border-radius: 0.5rem;
+  }
+  
+  #pengisi-acara div:nth-child(5) img:nth-child(1) {
+    width: 15vw;
+  }
+  #pengisi-acara div:nth-child(5) img:nth-child(2) {
+    width: 22vw;
+  }
+  
+  #pengisi-acara div:nth-child(6) img:nth-child(1) {
+    width: 12vw;
+  }
+  #pengisi-acara div:nth-child(6) img:nth-child(2) {
+    width: 23vw;
+  }
+  
+  #pengisi-acara div:nth-child(7) img:nth-child(2),
+  #pengisi-acara div:nth-child(8) img:nth-child(2),
+  #pengisi-acara div:nth-child(9) img:nth-child(2),
+  #pengisi-acara div:nth-child(10) img:nth-child(2),
+  #pengisi-acara div:nth-child(11) img:nth-child(2),
+  #pengisi-acara div:nth-child(12) img:nth-child(2) {
+    width: 22vw;
+  }
+  
+  #pengisi-acara div:nth-child(10) img:nth-child(1) {
+    border-radius: 0.75rem;
+    width: 12vw;
+  }
+  
+  #pengisi-acara div:nth-child(11) img:nth-child(1) {
+    width: 22vw;
+  }
+}
 
 
 @media screen and (max-width: 768px) {
@@ -370,6 +496,54 @@ nav.scrolled {
   .info-container {
     align-items: center;
   }
+
+  #pengisi-acara {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #pengisi-acara div img:nth-child(1) {
+    width: 30vw;
+  }
+  #pengisi-acara div img:nth-child(2) {
+    width: 35vw;
+  }
+  
+  #pengisi-acara div:nth-child(4) img:nth-child(1) {
+    width: 20vw;
+    border-radius: 0.5rem;
+  }
+  
+  #pengisi-acara div:nth-child(5) img:nth-child(1) {
+    width: 25vw;
+  }
+  #pengisi-acara div:nth-child(5) img:nth-child(2) {
+    width: 35vw;
+  }
+  
+  #pengisi-acara div:nth-child(6) img:nth-child(1) {
+    width: 18vw;
+  }
+  #pengisi-acara div:nth-child(6) img:nth-child(2) {
+    width: 35vw;
+  }
+  
+  #pengisi-acara div:nth-child(7) img:nth-child(2),
+  #pengisi-acara div:nth-child(8) img:nth-child(2),
+  #pengisi-acara div:nth-child(9) img:nth-child(2),
+  #pengisi-acara div:nth-child(10) img:nth-child(2),
+  #pengisi-acara div:nth-child(11) img:nth-child(2),
+  #pengisi-acara div:nth-child(12) img:nth-child(2) {
+    width: 35vw;
+  }
+  
+  #pengisi-acara div:nth-child(10) img:nth-child(1) {
+    border-radius: 0.75rem;
+    width: 20vw;
+  }
+  
+  #pengisi-acara div:nth-child(11) img:nth-child(1) {
+    width: 35vw;
+  }
 }
 
 @media screen and (max-width: 540px) {
@@ -401,6 +575,54 @@ nav.scrolled {
     width: 11rem;
     height: 2rem;
     border-radius: 0;
+  }
+
+  #pengisi-acara {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  #pengisi-acara div img:nth-child(1) {
+    width: 50vw;
+  }
+  #pengisi-acara div img:nth-child(2) {
+    width: 70vw;
+  }
+  
+  #pengisi-acara div:nth-child(4) img:nth-child(1) {
+    width: 40vw;
+    border-radius: 0.5rem;
+  }
+  
+  #pengisi-acara div:nth-child(5) img:nth-child(1) {
+    width: 40vw;
+  }
+  #pengisi-acara div:nth-child(5) img:nth-child(2) {
+    width: 75vw;
+  }
+  
+  #pengisi-acara div:nth-child(6) img:nth-child(1) {
+    width: 30vw;
+  }
+  #pengisi-acara div:nth-child(6) img:nth-child(2) {
+    width: 75vw;
+  }
+  
+  #pengisi-acara div:nth-child(7) img:nth-child(2),
+  #pengisi-acara div:nth-child(8) img:nth-child(2),
+  #pengisi-acara div:nth-child(9) img:nth-child(2),
+  #pengisi-acara div:nth-child(10) img:nth-child(2),
+  #pengisi-acara div:nth-child(11) img:nth-child(2),
+  #pengisi-acara div:nth-child(12) img:nth-child(2) {
+    width: 75vw;
+  }
+  
+  #pengisi-acara div:nth-child(10) img:nth-child(1) {
+    border-radius: 0.75rem;
+    width: 45vw;
+  }
+  
+  #pengisi-acara div:nth-child(11) img:nth-child(1) {
+    width: 70vw;
   }
 }
 
