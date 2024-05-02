@@ -166,10 +166,22 @@ nav.scrolled {
   background: linear-gradient(105deg, #1ae7f2, #2243ba);
 }
 
+.pengisi-acara-header {
+  width: 100%;
+  padding: 1rem 8vw 0;
+  background: #7d76ff;
+  display: grid;
+  place-items: center;
+}
+.pengisi-acara-header h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+}
 
 #pengisi-acara {
   width: 100%;
-  padding: 2rem 8vw 1rem;
+  padding: 1rem 8vw;
   background-color: #7d76ff;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
